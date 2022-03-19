@@ -126,7 +126,7 @@ func main() {
 	)
 
 	flag.IntVar(&xs, "x", 1920/8, "X resolution")
-	flag.IntVar(&ys, "y", 1920/8, "Y resolution")
+	flag.IntVar(&ys, "y", 1080/8, "Y resolution")
 	flag.IntVar(&ss, "s", 4, "Scale (only works if not fullscreen)")
 	flag.BoolVar(&fs, "f", false, "Fullscreen")
 
