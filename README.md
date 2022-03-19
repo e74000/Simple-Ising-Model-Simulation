@@ -4,7 +4,7 @@
 
 This is a simple simulation of the Ising model, written in Go, visualised with ebiten.
 
-use up/down arrow keys to increase or decrease temperature respectively.
+Use up/down arrow keys to increase or decrease temperature respectively.
 
 ### Command line flags:
 
