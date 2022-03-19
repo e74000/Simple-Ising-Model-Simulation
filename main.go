@@ -118,18 +118,24 @@ func FW(a, b int) int {
 }
 
 func main() {
-	var x, y, s int
+	var (
+		xs int
+		ys int
+		ss int
+		fs bool
+	)
 
-	flag.IntVar(&x, "x", 256, "Window width")
-	flag.IntVar(&y, "y", 256, "Window height")
-	flag.IntVar(&s, "s", 2, "Window scale")
+	flag.IntVar(&xs, "x", 1920/8, "X resolution")
+	flag.IntVar(&ys, "y", 1920/8, "Y resolution")
+	flag.IntVar(&ss, "s", 4, "Scale (only works if not fullscreen)")
+	flag.BoolVar(&fs, "f", false, "Fullscreen")
 
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 
 	g := &Game{
-		x:        x,
-		y:        y,
-		winScale: s,
+		x:        xs,
+		y:        ys,
+		winScale: ss,
 	}
 
 	g.grid = Grid{
@@ -161,6 +167,7 @@ func main() {
 
 	ebiten.SetWindowSize(g.x*g.winScale, g.y*g.winScale)
 	ebiten.SetWindowTitle("Ising Model")
+	ebiten.SetFullscreen(fs)
 
 	if err := ebiten.RunGame(g); err != nil {
 		log.Fatal(err)

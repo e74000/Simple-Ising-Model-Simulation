@@ -2,10 +2,13 @@
 
 ## About:
 
-This is a simple simulation of the Ising model, written in Go, using Ebiten for graphics.
+This is a simple simulation of the Ising model, written in Go, visualised with ebiten.
 
-## Flags:
+use up/down arrow keys to increase or decrease temperature respectively.
 
-* `-x`: Set window width,
-* `-y`: Set window height,
-* `-s`: Set pixel size,
+### Command line flags:
+
+* `-x`: X resolution
+* `-y`: Y resolution
+* `-s`: Scale (only works if not fullscreen)
+* `-f`: Enable fullscreen
