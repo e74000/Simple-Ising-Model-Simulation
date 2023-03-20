@@ -6,6 +6,8 @@ This is a simple simulation of the Ising model, written in Go, visualised with e
 
 Use up/down arrow keys to increase or decrease temperature respectively.
 
+You can see a more interactive version of this on my [website](https://e74000.net/posts/isingmodel/).
+
 ### Command line flags:
 
 * `-x`: X resolution
